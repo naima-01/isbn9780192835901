@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>♡ entries ♡</title>
+    <link rel="icon" type="image/x-icon" href="assets/entries-logo.PNG">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <a href="art.html">
+            <img src="assets/art.png" class="art">
+        </a>
+        <a href="clicks.html">
+            <img src="assets/clicks.png" class="clicks">
+        </a>
+        <a href="index.html">
+            <img src="assets/banner.png" class="banner">
+        </a>
+        <a href="entries.html">
+            <img src="assets/entries.png" class="entries">
+        </a>
+        <a href="contact.html">
+            <img src="assets/contact.png" class="contact">
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <!-- Blog Preview Card 1 -->
+            <div class="card" id="card-one" onclick="showFullPost('full-post-1')">
+                <div class="card-content">
+                    <div class="card-image">
+                        <div class="preview-image">
+                            <img src="assets/entry-1-preview.gif" alt="Preview Image" max width="200px";max-height="auto">
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        <h2>pork & chop charms</h2>
+                        <h5>June 30, 2024</h5>
+                        <p>made charms of kaycelle's hamsters using air dry clay :3</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Preview Card 2 -->
+            <div class="card" id="card-two" onclick="showFullPost('full-post-2')">
+                <div class="card-content">
+                    <div class="card-image">
+                        <div class="preview-image">
+                            <img src="assets/entry-2-preview.gif" alt="Preview Image" max width="200px";max-height="auto">
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        <h2>miffy pin</h2>
+                        <h5>March 2, 2024</h5>
+                        <p>used a lazer engraver on wood to make a pin for guad :3</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Preview Card 3 -->
+            <div class="card" id="card-one" onclick="showFullPost('full-post-3')">
+                <div class="card-content">
+                    <div class="card-image">
+                        <div class="preview-image">
+                            <img src="assets/entry-3-preview.gif" alt="Preview Image" max width="200px";max-height="auto">
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        <h2>ceramic painting</h2>
+                        <h5>November 1, 2023</h5>
+                        <p>acrylic painting on ceramic tile with friends :3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="rightcolumn">
+            <div class="card">
+                <div class="about-me">
+                    <img src="assets/about-me-img.gif">
+                </div>
+                <p>hi, i’m naima! i made this digital diary to keep my thoughts, art, projects, and little moments that make me smile— all in one place ^^<br>  
+                    it’s like a scrapbook of my mind, where i can share and track my experiences :3</p>
+            </div>                  
+            <div class="card">
+                <h2>meet my oc :3</h2>
+                <img src="assets/oc.gif"style="width: 95%; height: auto;">
+            </div>
+            <div class="card">
+                <h2>Follow Me</h2>
+                <p>instagram: <a href="https://www.instagram.com/isbn9780192835901/">isbn9780192835901</a> ₍ᐢ.ˬ.⑅ᐢ₎</p>
+                <p class="bear">
+                    ───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───<br>
+                    ───█▒▒░░░░░░░░░▒▒█───<br>
+                    ────█░░█░░░░░█░░█────<br>
+                    ─▄▄──█░░░▀█▀░░░█──▄▄─<br>
+                    █░░█─▀▄░░░░░░░▄▀─█░░█
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Full Version of the Blog Post 1 (Initially Hidden) -->
+    <div id="full-post-1" class="full-post hidden">
+        <div class="carousel">
+            <button class="carousel-button prev">&lt;</button>
+            <div class="carousel-images">
+                <img src="assets/entry-1-one.png" alt="Carousel Image 1">
+                <img src="assets/entry-1-two.png" alt="Carousel Image 2">
+                <img src="assets/entry-1-three.png" alt="Carousel Image 3">
+            </div>
+            <button class="carousel-button next">&gt;</button>
+        </div>
+        <div class="post-text">
+            <h2>pork & chop charms</h2>
+            <h5>June 30, 2024</h5>
+            <p>made charms of kaycelle's hamsters using air dry clay :3<br><br>
+            pork and chop are my friend kaycelle's roborovski dwarf hamsters. they like to eat and be 
+            silly. kaycelle dotes on them a lot, which makes me and guad joke about how we'd want to be 
+            reborn as kaycelle's hamsters in our next life. a lot of our friends either hate on them, or
+             threaten to eat them-- which i find really rude! it's okay though; as the captain of pork 
+             and chop defense team, i will protect them >:3 (they're mostly all talk and no bite anyways 
+             lol)</p>
+        </div>
+        <button onclick="hideFullPost()">close</button>
+    </div>
+    
+    <!-- Full Version of the Blog Post 2 (Initially Hidden) -->
+    <div id="full-post-2" class="full-post hidden">
+        <div class="carousel">
+            <button class="carousel-button prev">&lt;</button>
+            <div class="carousel-images">
+                <img src="assets/entry-2-one.PNG" alt="Carousel Image 1">
+                <img src="assets/entry-2-two.PNG" alt="Carousel Image 2">
+                <img src="assets/entry-2-three.PNG" alt="Carousel Image 3">
+            </div>
+            <button class="carousel-button next">&gt;</button>
+        </div>
+        <div class="post-text">
+            <h2>miffy pin</h2>
+            <h5>March 2, 2024</h5>
+            <p>used lazer engraver on wood to make a pin for guad :3<br><br>
+            my friend guad once mentioned that they really like miffy and they also wanted to get some pins for their bag, so i made this miffy pin for them on a whim ^^ i didn't realize that i'd have to use wood glue to attach the pin with the wooden piece so they came off very easily which made me very disappointed, but it was a fun project b/c guad liked it a lot :D</p>
+        </div>
+        <button onclick="hideFullPost()">close</button>
+    </div>
+
+    <!-- Full Version of the Blog Post 3 (Initially Hidden) -->
+    <div id="full-post-3" class="full-post hidden">
+        <div class="carousel">
+            <button class="carousel-button prev">&lt;</button>
+            <div class="carousel-images">
+                <img src="assets/entry-3-one.png" alt="Carousel Image 1">
+                <img src="assets/entry-3-two.png" alt="Carousel Image 2">
+            </div>
+            <button class="carousel-button next">&gt;</button>
+        </div>
+        <div class="post-text">
+            <h2>ceramic coaster</h2>
+            <h5>November 1, 2023</h5>
+            <p>acrylic painting on ceramic tile with friends :3<br><br>
+            ash, duke, and i went to a ceramic painting workshop at my school and it was rlly fun! there was an extra tile and i wanted to paint a cute duck but i ended up dropping it and it broke :< at least the other one was safe! reference for my painting's by Jacee on pinterest<3 </p>
+        </div>
+        <button onclick="hideFullPost()">close</button>
+    </div>
+
+    
+
+    <div class="footer">
+        <h2>₊☽ ◯ ☾₊thanks for visiting! i hope you enjoyed your stay :3₊☽ ◯ ☾₊</h2>
+    </div>
+</body>
+</html>

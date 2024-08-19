@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>♡ art ♡</title>
+    <link rel="icon" type="image/x-icon" href="assets/art-logo.PNG">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <a href="art.html">
+            <img src="assets/art.png" class="art">
+        </a>
+        <a href="clicks.html">
+            <img src="assets/clicks.png" class="clicks">
+        </a>
+        <a href="index.html">
+            <img src="assets/banner.png" class="banner">
+        </a>
+        <a href="entries.html">
+            <img src="assets/entries.png" class="entries">
+        </a>
+        <a href="contact.html">
+            <img src="assets/contact.png" class="contact">
+        </a>
+    </div>
+    
+    <div class="gallery">
+        <div class="gallery-images">
+            <div class="image"><img src="assets/img1.png" onclick="FullView(this.src)"></div>
+            <div class="image"><img src="assets/img2.png" onclick="FullView(this.src)"></div>
+            <div class="image"><img src="assets/img3.png" onclick="FullView(this.src)"></div>
+            <div class="image"><img src="assets/img7.jpg" onclick="FullView(this.src)"></div>
+            <div class="image"><img src="assets/img8.png" onclick="FullView(this.src)"></div>
+            <div class="image"><img src="assets/img9.png" onclick="FullView(this.src)"></div>
+            <div class="image"><img src="assets/img4.jpg" onclick="FullView(this.src)"></div>
+            <div class="image"><img src="assets/img5.png" onclick="FullView(this.src)"></div>
+            <div class="image"><img src="assets/img6.jpg" onclick="FullView(this.src)"></div>
+        </div>
+    </div>
+    
+    <div id="FullImageView">
+        <span class="close" onclick="closeFullView()">&times;</span>
+        <img id="FullImage">
+    </div>
+</body>
+</html>

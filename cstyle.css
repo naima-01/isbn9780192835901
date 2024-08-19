@@ -1,0 +1,113 @@
+html, body {
+    height: 100%; /* makes body takes up the full height */
+    margin: 0; /* removes any default margins */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+/*background*/
+body {
+    position: relative;
+    background-color: #E4E4E4;
+    background: 
+        linear-gradient(to right, #C3C3C3 2px, transparent 2px) 0 0,
+        linear-gradient(to bottom, #C3C3C3 2px, transparent 2px) 0 0;
+    background-size: 20px 20px; /* Adjust the size of the grid squares */
+    background-color: #E4E4E4;
+}
+.title {
+    text-align: center;
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size:500%;
+  
+    background: url(https://i.pinimg.com/originals/65/75/eb/6575ebcd4c72b3c32ec024ac85de9d4c.gif);
+    background-size: auto;
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+  
+    margin: 0;
+    opacity: 0;
+    z-index: 2;
+    
+    transition: opacity 0.5s ease; 
+    transition-delay: 1s; 
+  }
+  .tea{
+    max-width: 100%; 
+    max-height: auto;
+    opacity: 0;
+    transition: opacity 0.7s ease; 
+    transition-delay: 1.5s;
+
+    z-index: 1;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: -15%;
+  }
+
+.clicks-container{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+
+.clicks-container.visible {
+    opacity: 1; 
+}
+
+.clicks-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 3;
+}
+
+.clicks-container img {
+    max-width: 100%;
+    height: auto; 
+}
+
+.clicks-container img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 3px 8px rgb(136, 136, 136));
+}
+
+.art, .clicks, .entries, .contact {
+    opacity: 0; 
+}
+
+
+@media (max-width: 768px) {
+    .clicks-container {
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    .banner {
+        order: -1; 
+        width: 100%; 
+    }
+    
+    .clicks-container img {
+        width: auto; 
+        margin-bottom: 10px; 
+    }
+    
+    .clicks-container {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+   
+    .tea {
+        width: 100%; 
+        height: auto;
+        margin-top: 20%;
+        margin-bottom: 0;
+        
+    }
+    
+}

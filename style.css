@@ -1,0 +1,362 @@
+html, body {
+  height: 100%; 
+  margin: 0; 
+  scroll-behavior: smooth;
+}
+/*background*/
+body {
+  position: relative;
+  background-color: #E4E4E4;
+  background: 
+      linear-gradient(to right, #C3C3C3 2px, transparent 2px) 0 0,
+      linear-gradient(to bottom, #C3C3C3 2px, transparent 2px) 0 0;
+  background-size: 20px 20px; 
+  background-color: #E4E4E4;  
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.container img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.container img:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 3px 8px rgb(136, 136, 136));
+}
+
+.gallery, .row, .cgallery{
+  animation: transitionIn 0.75s;
+}
+@keyframes transitionIn{
+  from{
+      opacity: 0;
+      transform: rotateX(-10deg);
+  }
+  to{
+      opacity: 1;
+      transform: rotateX(0);
+  }
+}
+/*----------------------------------------art---------------------------------------------------------*/
+
+.gallery {
+  position: relative; 
+  
+  padding-bottom: 50px;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 30px; 
+}
+
+.image{
+  border: 10px solid rgb(81, 81, 81);
+
+}
+.image img {
+  max-width: 350px;
+  height: auto; 
+  display: block; 
+  transition: transform 0.3s ease; 
+}
+
+.image img:hover {
+  cursor: pointer;
+  filter: brightness(95%); 
+  transform: scale(1.01);
+}
+
+#FullImageView {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  z-index: 1000; 
+}
+
+#FullImage {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: contain;
+}
+
+#FullImageView .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+/*--------------------------------------------------------------entries--------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+.leftcolumn {
+  float: left;
+  width: 72.84%;
+  padding-left: 1.76%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25.3%;
+  padding-left: 1.7%;
+  text-align: center;
+}
+
+.about-me {
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+  overflow: hidden; 
+}
+
+.about-me img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+
+.card {
+  background-color: rgb(81, 81, 81);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  font-family: 'UnifrakturMaguntia', serif;
+}
+#card-one, #card-two{
+  transition: transform 0.2s ease, filter 0.2s ease; 
+}
+#card-one:hover, #card-two:hover{
+  cursor: pointer;
+  filter: brightness(90%); 
+}
+#card-one:active, #card-two:active{
+  transform: scale(1.01);
+}
+
+.card-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-image {
+  flex: 1;
+  width: 250px; 
+  height: 250px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  box-sizing: border-box; 
+
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.card-text {
+  flex: 2;
+  justify-content: flex-start;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bear{
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+/* Responsive layout */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+  .card-content {
+    flex-direction: column; 
+  }
+}
+
+.row {
+  position: relative;
+  
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(81, 81, 81);
+  margin-top: 20px;
+  font-family:  'UnifrakturMaguntia', serif;
+  font-size: large;
+  
+}
+
+.full-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d1d1d1;
+  background-image: radial-gradient(#898989 0.5px, #d1d1d1 0.5px);
+  background-size: 10px 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.carousel {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; 
+}
+
+.carousel img {
+  min-width: 100%;
+  height: auto;
+  object-fit: contain; /* Keeps the aspect ratio */
+}
+
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+
+.post-text {
+  flex: 2;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family:  'UnifrakturMaguntia', serif;
+  font-size: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin-top: 3px;
+  background: rgb(81, 81, 81);
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 20px;
+
+}
+button:hover{
+  cursor: pointer;
+  
+}
+/*--------------------clicks-----------------------------*/
+.cgallery {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.cgallery-images {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 30px; 
+}
+
+.cimage {
+  border: 10px solid rgb(81, 81, 81);
+}
+
+.cimage img {
+  max-width: 250px; 
+  height: auto; 
+  display: block; 
+  transition: transform 0.3s ease;
+}
+
+.cimage img:hover {
+  cursor: pointer;
+  filter: brightness(95%);
+  transform: scale(1.01);
+}
+
+#cFullImageView {
+  display: none;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+#cFullImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#cFullImageView .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
