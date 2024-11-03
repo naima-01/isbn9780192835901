@@ -360,3 +360,11 @@ button:hover{
   font-size: 40px;
   cursor: pointer;
 }
+
+.games{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin-top: -4.2%;
+  
+}
