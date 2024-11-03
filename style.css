@@ -365,6 +365,7 @@ button:hover{
   display: flex;
   flex-wrap: wrap; 
   justify-content: center;
-  margin-top: -4.3%;
+  z-index: 999;
+  background-color:rgb(81, 81, 81);
   
 }
